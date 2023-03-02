@@ -2,23 +2,22 @@
 
 **Blink component Led using Stm32f429 discovery board**\
 \
-This project is based on [blinky_stm32f429disco] (<https://github.com/wolfbiters/blinky_stm32f429disco/>) project.\
-I just follow the instructions to compile and execute blinky main program. After what I built a small circuit with one led in order to make it flash to pin PG15 of the stm32f429 dicovery board.
+This project was inspired on [blinky_stm32f429disco] (https://github.com/wolfbiters/blinky_stm32f429disco/) project.\
+I followed the instructions to compile and execute blinky main program. After what I built a small circuit with one led in order to make it flash to pin PG15 of the stm32f429 dicovery board.
 
 ## Prerequesite (tested on linux ubuntu 22.04 )
 
-*Alire*: <https://github.com/alire-project/alire/releases>
+**Alire**: <https://github.com/alire-project/alire/releases>
 
 1. Download and unzip the latest linux zip
 2. Add *where_you_unzipped/alr* to PATH.
 3. Verify Alire is found on your path by running this command on your terminal :
-
->which alr
+    which alr
 
 ## OpenOCD
 
 Here is a [very good tutorial](<https://youtu.be/-p26X8lTAvo>) on how to install openocd on ubuntu.\
-\
+
 
 **STM32f429 Discovery board**\
 \
@@ -27,14 +26,15 @@ Here is a [very good tutorial](<https://youtu.be/-p26X8lTAvo>) on how to install
 
 
 ## Download 
-if you don't have git, you can downloaded it [here](https://git-scm.com/downloads").\
+if you don't have git, you can downloaded it [here](https://git-scm.com/downloads).
 
-Then create a new folder or move in the directory of your choice and clone this repository by running:\
+Then create a new folder or move in the directory of your choice and clone this repository by running:
     git clone https://github.com/bullyDD/blink-led.git
 
 
 ## Build
-Inside blink-led repo, run:\
+Inside blink-led repo, run:
+
     alr build
     eval "$(alr printenv)"
     gprbuild blink_led.gpr
@@ -44,9 +44,9 @@ Inside blink-led repo, run:\
     gnatstudio blink_led.gpr
 
 ## Run 
-Now you can run the code on stm32f429 discovery board by running:\
+Now you can run the code on stm32f429 discovery board by running:
+
     openocd -f /usr/local/share/openocd/scripts/board/stm32f429disc1.cfg -c 'program bin/blink_led verify reset exit'
-\
 
 As result you should see the led fashing at 1Hz (every 1 second). :-)
 
