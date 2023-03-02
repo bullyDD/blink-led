@@ -12,13 +12,13 @@ procedure Blink_Led is
    Period : constant Time_Span := Milliseconds (1000);
    Next : Time := Clock;
 
-   Blue_Led : Digital_IO renames PG15;
+   Led_Pin : Digital_IO renames PG15;
 
 begin
-   Initialize_Led (This => Blue_Led);
+   Initialize_Led (This => Led_Pin);
 
    loop
-      Toggle_Pin_Led (This => Blue_Led);
+      Toggle_Pin_Led (This => Led_Pin);
       Next := Next + Period;
       delay until Next;
    end loop;
