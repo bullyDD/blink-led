@@ -2,7 +2,7 @@
 
 **Blink component Led using Stm32f429 discovery board**\
 \
-This project was inspired on [blinky_stm32f429disco] (https://github.com/wolfbiters/blinky_stm32f429disco/) project.\
+This project was inspired on [blinky_stm32f429disco](https://github.com/wolfbiters/blinky_stm32f429disco/) project.\
 I followed the instructions to compile and execute blinky main program. After what I built a small circuit with one led in order to make it flash to pin PG15 of the stm32f429 dicovery board.
 
 ## Prerequesite (tested on linux ubuntu 22.04 )
@@ -11,12 +11,13 @@ I followed the instructions to compile and execute blinky main program. After wh
 
 1. Download and unzip the latest linux zip
 2. Add *where_you_unzipped/alr* to PATH.
-3. Verify Alire is found on your path by running this command on your terminal :
+3. Verify Alire is found on your path by running this command on your terminal:
+
     which alr
 
 ## OpenOCD
 
-Here is a [very good tutorial](<https://youtu.be/-p26X8lTAvo>) on how to install openocd on ubuntu.\
+Here is a [very good tutorial](<https://youtu.be/-p26X8lTAvo>) on how to install openocd on ubuntu.
 
 
 **STM32f429 Discovery board**\
@@ -29,6 +30,7 @@ Here is a [very good tutorial](<https://youtu.be/-p26X8lTAvo>) on how to install
 if you don't have git, you can downloaded it [here](https://git-scm.com/downloads).
 
 Then create a new folder or move in the directory of your choice and clone this repository by running:
+
     git clone https://github.com/bullyDD/blink-led.git
 
 
